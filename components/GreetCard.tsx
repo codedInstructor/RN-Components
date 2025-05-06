@@ -1,13 +1,22 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-const GreetCard = () => {
+interface GreetCardProps{
+    name: string;
+}
+const GreetCard = ({name}:GreetCardProps) => {
   return (
-    <View>
-        <Text>Bonjour flan ...</Text>
-        <Text>fe Ghuyooogh</Text>
-      </View>
+    <View style={{
+        borderWidth:1,
+        padding: 10,
+        borderRadius:10,
+        marginBottom: 10
+    }}>
+    <Text>Hello {name}</Text>
+  </View>
   )
 }
 
 export default GreetCard
+
+const styles = StyleSheet.create({})
