@@ -1,3 +1,4 @@
+import { Book } from "@/data/Books";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 
@@ -7,15 +8,16 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 //interface 
 interface BookItemProps{
-    title:string;
-    image: string;
-    price: string;
-    author: string;
+    // title:string;
+    // image: string;
+    // price: string;
+    // author: string;
+    book:Book
 }
 // prop = properties 
 
 
-const BookItem = ({title, image, price, author}:BookItemProps) => {
+const BookItem = ({book}:BookItemProps) => {
   return (
     // 1. camelCase
     // 2. All Tags need to be closed <Image /> <Text></Text>
@@ -35,7 +37,7 @@ const BookItem = ({title, image, price, author}:BookItemProps) => {
     >
       <Image
         source={{
-          uri: image,
+          uri: book.image,
         }}
         style={{
           height: 150,
@@ -50,10 +52,10 @@ const BookItem = ({title, image, price, author}:BookItemProps) => {
             fontWeight: "bold",
           }}
         >
-          {title}
+          {book.title}
         </Text>
-        <Text>{author}</Text>
-        <Text>{price} KWD</Text>
+        <Text>{book.author}</Text>
+        <Text>{book.priceKWD} KWD</Text>
       </View>
     </View>
   );

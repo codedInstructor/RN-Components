@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
         padding:10,
         borderRadius:10,
         alignItems:"center",
-        margin:5
+        margin:5,
+        height:50
       },
 
     badgeText:{

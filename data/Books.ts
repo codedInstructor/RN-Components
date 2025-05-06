@@ -1,6 +1,6 @@
 // array of Book Objects (image, author, price and title)
 
-interface Book {
+export interface Book {
   title: string;
   author: string;
   priceKWD: string;
@@ -28,7 +28,7 @@ const books: Book[] = [
   },
   {
     image: "https://covers.openlibrary.org/b/id/10220408-L.jpg",
-    title: "Sapiens: A Brief History of Humankind",
+    title: "Sapiens: A Brief Hist",
     author: "Yuval Noah Harari",
     priceKWD: "8.0",
   },
@@ -37,6 +37,12 @@ const books: Book[] = [
     title: "The Alchemist",
     author: "Paulo Coelho",
     priceKWD: "4.95",
+  },
+  {
+    image: "https://covers.openlibrary.org/b/id/10342534-L.jpg",
+    title: "Babel",
+    author: "R.F Kuang",
+    priceKWD: "14.95",
   },
 ];
 
